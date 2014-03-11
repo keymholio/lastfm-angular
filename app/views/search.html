@@ -1,0 +1,11 @@
+<div class="row" ng-controller="SearchCtrl">
+  <form role="form" novalidate>
+    <div class="col-xs-8 col-sm-9 col-md-10">
+      <input type="text" class="form-control input-lg" placeholder="enter artist" ng-model="artist.search">
+    </div>
+    <div class="col-xs-4 col-sm-3 col-md-2">
+      <button type="submit" class="btn btn-lg btn-primary" ng-click="search()">Search</button>
+    </div>
+  </form>
+  {{ artists | json }}
+</div>

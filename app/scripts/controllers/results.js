@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('lastfmApp')
-  .controller('ResultsCtrl', ['$scope', 'Artists', function ($scope, Artists) {
-    $scope.search = "Korn";
-    $scope.lastfm_json = Artists.query();
-    $scope.artists = $scope.lastfm_json;
-  }]);
+  .controller('ResultsCtrl', ['$scope', 'Artists', '$routeParams',
+    function ($scope, Artists, $routeParams) {
+      $scope.search = $routeParams.artist;
+      $scope.artists = Artists.query({ 'artist':$routeParams.artist });
+    }]);

@@ -6,10 +6,10 @@ angular.module('lastfmServices', ['ngResource'])
       query: {
         method:'GET',
         params: {
-          'method':'artist.search',
-          'artist':'korn',
-          'api_key':'aceab0ee7a1b569b1cec10bac112a84e',
-          'format':'json'
+          'method': 'artist.search',
+          'artist': '@artist',
+          'api_key': 'aceab0ee7a1b569b1cec10bac112a84e',
+          'format': 'json'
         }
       }
     });

@@ -1,9 +1,9 @@
 'use strict';
 
 angular.module('lastfmApp')
-  .controller('SearchCtrl', ['$scope', 'Artists', function ($scope, Artists) {
+  .controller('SearchCtrl', ['$scope', '$location', function ($scope, $location) {
 
-    $scope.search = function() {
-      $scope.artists = Artists.query();
+    $scope.search = function(param) {
+      $location.path( '/search/' + param );
     };
   }]);

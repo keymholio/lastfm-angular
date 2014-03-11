@@ -1,17 +1,17 @@
 'use strict';
 
-describe('Controller: SearchCtrl', function () {
+describe('Controller: ResultsCtrl', function () {
 
   // load the controller's module
   beforeEach(module('lastfmApp'));
 
-  var SearchCtrl,
+  var ResultsCtrl,
     scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    SearchCtrl = $controller('SearchCtrl', {
+    ResultsCtrl = $controller('ResultsCtrl', {
       $scope: scope
     });
   }));

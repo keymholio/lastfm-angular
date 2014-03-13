@@ -1,10 +1,10 @@
 <div class="row" ng-controller="ResultsCtrl">
-  <h3>Search results for {{ search }}</h3>
-  <p>{{ artists.results['opensearch:totalResults'] }} matches were found</p>
+  <h3>Search results for "{{ search }}"</h3>
+  <p ng-show="total">{{ total }} matches were found</p>
 
   <table class="table">
     <tr ng-repeat="a in artists.results.artistmatches.artist">
-      <td><img ng-src="{{ a.image[4]['#text'] }}" /></td>
+      <td><img ng-src="{{ a.image[3]['#text'] }}" /></td>
       <td>{{ a.name }}</td>
     </tr>
   </table>

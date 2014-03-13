@@ -8,6 +8,7 @@ angular.module('lastfmApp')
     Artists.getArtists($routeParams.artist)
       .then(function (data) {
         $scope.artists = data;
+        $scope.total = data.results['opensearch:totalResults'];
       }, function(error) {
         // promise rejected
         console.log(error);

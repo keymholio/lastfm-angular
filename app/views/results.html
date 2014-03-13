@@ -1,16 +1,10 @@
 <div class="row" ng-controller="ResultsCtrl">
   <h3>Search results for {{ search }}</h3>
   <p>{{ artists.results['opensearch:totalResults'] }} matches were found</p>
+
   <table class="table">
     <tr ng-repeat="a in artists.results.artistmatches.artist">
-      <td>
-        <div ng-switch on="a.image[2]['#text']">
-          <div ng-switch-when=""><div class="empty"></div></div>
-          <div ng-switch-default>
-              <img src="{{ a.image[2]['#text'] }}">
-          </div>
-        </div>
-      </td>
+      <td><img ng-src="{{ a.image[4]['#text'] }}" /></td>
       <td>{{ a.name }}</td>
     </tr>
   </table>

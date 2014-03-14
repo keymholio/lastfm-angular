@@ -56,7 +56,10 @@ body {
   }
 
   .artist-name {
-    padding: 0.4em 1em 0.8em;
+    padding: 0.8em;
     font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }

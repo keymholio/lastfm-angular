@@ -4,11 +4,13 @@ angular.module('lastfmApp')
   .controller('ResultsCtrl', function ($scope, Artists, $routeParams) {
     // search echo
     $scope.search = $routeParams.artist;
+    $scope.resultMessage = 'Searching...';
 
     Artists.getArtists($routeParams.artist)
       .then(function (data) {
         $scope.artists = data.results.artistmatches.artist;
         $scope.total = data.results['opensearch:totalResults'];
+        $scope.resultMessage = $scope.total + ' matches were found';
 
         // vars for grid layout
         $scope.rows = [];

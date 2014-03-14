@@ -1,11 +1,26 @@
-<div class="row" ng-controller="ResultsCtrl">
-  <h3>Search results for "{{ search }}"</h3>
-  <p ng-show="total">{{ total }} matches were found</p>
+<div class="container">
+  <div class="row" ng-controller="ResultsCtrl">
+    <h3>Search results for "{{ search }}"</h3>
+    <p ng-show="total">{{ total }} matches were found</p>
 
-  <table class="table">
-    <tr ng-repeat="a in artists.results.artistmatches.artist">
-      <td><img ng-src="{{ a.image[3]['#text'] }}" /></td>
-      <td>{{ a.name }}</td>
-    </tr>
-  </table>
+    <!-- <table class="table">
+      <tr ng-repeat="a in artists.results.artistmatches.artist">
+        <td><img ng-src="{{ a.image[3]['#text'] }}" /></td>
+        <td>{{ a.name }}</td>
+      </tr>
+    </table> -->
+
+    <div class="row" ng-repeat="cols in rows">
+      <div class="col-sm-3" ng-repeat="artist in cols">
+        <div class="artist">
+          <div class="artist-image glyphicon glyphicon-user">
+            <img ng-src="{{ artist.image[3]['#text'] }}" />
+          </div>
+          <div class="artist-name">
+            {{ artist.name }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

@@ -1,14 +1,20 @@
 <div class="container">
   <div class="row" ng-controller="ResultsCtrl">
-    <h3>Search results for "{{ search }}"</h3>
-    <p ng-show="total">{{ total }} matches were found</p>
+    <div class="row">
+      <div class="col-sm-12">
+        <h3>Search results for "{{ search }}"</h3>
+      </div>
+    </div>
 
-    <!-- <table class="table">
-      <tr ng-repeat="a in artists.results.artistmatches.artist">
-        <td><img ng-src="{{ a.image[3]['#text'] }}" /></td>
-        <td>{{ a.name }}</td>
-      </tr>
-    </table> -->
+    <div class="row">
+      <div class="col-sm-6">
+        <p class="result-text" ng-show="total">{{ total }} matches were found</p>
+        <p class="result-text" ng-if="!rows.length">No matches were found</p>
+      </div>
+      <div class="col-sm-6">
+        <a href="/#/" class="btn btn-default pull-right">back</a>
+      </div>
+    </div>
 
     <div class="row" ng-repeat="cols in rows">
       <div class="col-sm-3" ng-repeat="artist in cols">

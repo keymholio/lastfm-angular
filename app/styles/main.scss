@@ -21,6 +21,10 @@ body {
   height: 80px;
 }
 
+.result-text {
+  padding: 1em 0;
+}
+
 .artist {
     margin-bottom: 3em;
     background-color: #ddd;
@@ -33,8 +37,14 @@ body {
     overflow: hidden;
     font-size: 8em;
     position: relative;
-    padding: 20px 80px;
     color: #888;
+
+    &:before {
+      margin: 0 auto;
+      display: block;
+      width: 115px;
+      margin-top: 15px;
+    }
 
     img {
       position: absolute;

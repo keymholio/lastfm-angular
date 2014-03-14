@@ -11,6 +11,7 @@ angular.module('lastfmServices', ['ngResource'])
                     'method': 'artist.search',
                     'artist': artist,
                     'api_key': 'aceab0ee7a1b569b1cec10bac112a84e',
+                    'limit': 24,
                     'format': 'json'
                   }
                 }).then(function(response) {

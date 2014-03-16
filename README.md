@@ -9,7 +9,7 @@ To run this project, you need to have the following installed globally:
 * Grunt & Grunt CLI (Command Line Interface)
 * Bower
 
-##Installs
+## Global Installs
 
 ###Ruby Installation
 
@@ -43,9 +43,19 @@ sudo npm install -g grunt-cli
 sudo npm install -g bower
 ```
 
+##Local Installs
+Before running the project you need to get the local npm and bower packages.
+To do this run the following:
+```bash
+npm install
+```
+```bash
+bower install
+```
+
 ## Run Project
 ```bash
 grunt serve
 ```
 
-There are other tasks you can do with Grunt. Refer to `Gruntfile.js`.
+*There are other tasks you can do with Grunt. Refer to `Gruntfile.js`.*

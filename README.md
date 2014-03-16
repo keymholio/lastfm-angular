@@ -1,5 +1,6 @@
 #lastfm-angular
 ![](http://i.imgur.com/2yojf1l.jpg)
+
 This is an example project of doing a simple music artist search using Angular and
 LastFM's APIs. It's not a real project, just something to do to learn
 how awesome Angular, Jasmine and Yeoman are. 

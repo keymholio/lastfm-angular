@@ -1,6 +1,8 @@
 #lastfm-angular
 
-Angular POC with last.fm's APIs.
+This is an example project of doing a simple music artist search using Angular and
+LastFM's APIs. It's not a real project, just something to do to learn
+how awesome Angular and Yeoman are. 
 
 To run this project, you need to have the following installed globally:
 

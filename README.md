@@ -19,8 +19,8 @@ If you are on Mac OS X, Ruby is already installed. If you are on Windows, go her
 ### Compass Installation
 [Compass Install](http://compass-style.org/install/)
 ```bash
-gem update --system
-gem install compass
+sudo gem update --system
+sudo gem install compass
 ```
 ###Node Installation
 [How to install Node](http://howtonode.org/how-to-install-nodejs)

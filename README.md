@@ -44,7 +44,7 @@ sudo npm install -g bower
 ```
 
 ##Local Installs
-Before running the project you need to get the local npm and bower packages.
+Before running the project you need to install the local npm and bower packages.
 To do this run the following:
 ```bash
 npm install
@@ -56,6 +56,11 @@ bower install
 ## Run Project
 ```bash
 grunt serve
+```
+
+## Run Tests
+```bash
+grunt test
 ```
 
 *There are other tasks you can do with Grunt. Refer to `Gruntfile.js`.*

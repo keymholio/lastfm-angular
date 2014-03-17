@@ -2,7 +2,7 @@
 
 angular.module('lastfmApp')
   .controller('ResultsCtrl', function ($scope, Artists, $routeParams) {
-    // search echo
+    // echo search
     $scope.search = $routeParams.artist;
     $scope.resultMessage = 'Searching...';
 
@@ -21,10 +21,12 @@ angular.module('lastfmApp')
         // restructure data for grid layout
         for( var i=0 ; i < maxRows; i++){
           if ($scope.artists[counter]) {
-            $scope.rows.push([]);
             for( var j=0 ; j < maxCols; j++){
-              $scope.rows[i][j] = $scope.artists[counter];
-              counter++;
+              if ($scope.artists[counter]) {
+                $scope.rows.push([]);
+                $scope.rows[i][j] = $scope.artists[counter];
+                counter++;
+              }
             }
           }
         }

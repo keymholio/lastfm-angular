@@ -2,6 +2,8 @@
 
 angular.module('lastfmServices', ['ngResource'])
   .factory('Artists', function ($http, $q) {
+      var one = 1;
+      one = 1;
       return {
           getArtists: function(artist) {
               // the $http API is based on the deferred/promise APIs exposed by the $q service

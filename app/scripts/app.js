@@ -11,7 +11,7 @@ angular.module('lastfmApp', [
         templateUrl: 'views/search.html',
         controller: 'SearchCtrl'
       })
-      .when('/search/:artist', {
+      .when('/search/:artist/:page?', {
         templateUrl: 'views/results.html',
         controller: 'ResultsCtrl'
       })

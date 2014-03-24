@@ -25,7 +25,6 @@ angular.module('lastfmApp')
         var maxCols = 4;
         var maxRows = Math.round($scope.itemsPerPage / maxCols) * page;
         var counter = 0;
-
         // restructure data for grid layout
         for( var i=$scope.rows.length; i < maxRows; i++){
           if ($scope.artists[counter]) {
@@ -43,8 +42,6 @@ angular.module('lastfmApp')
         // promise rejected
         console.log(error);
       });
-
-
     };
 
     $scope.nextPage = function () {

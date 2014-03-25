@@ -14,7 +14,8 @@ angular.module('lastfmApp')
     $scope.populate = function (page) {
       Artists.getArtists($routeParams.artist, page)
       .then(function (data) {
-        $scope.artists = data.results.artistmatches.artist;
+        var artistResults = data.results.artistmatches.artist;
+        $scope.artists = angular.isArray(artistResults) ? artistResults : [artistResults];
         $scope.total = Number(data.results['opensearch:totalResults']);
         $scope.itemsPerPage = Number(data.results['opensearch:itemsPerPage']);
         $scope.resultMessage = $scope.total + ' matches were found';
@@ -25,6 +26,7 @@ angular.module('lastfmApp')
         var maxCols = 4;
         var maxRows = Math.round($scope.itemsPerPage / maxCols) * page;
         var counter = 0;
+
         // restructure data for grid layout
         for( var i=$scope.rows.length; i < maxRows; i++){
           if ($scope.artists[counter]) {
@@ -35,6 +37,8 @@ angular.module('lastfmApp')
                 counter++;
               }
             }
+          } else {
+            counter++;
           }
         }
         $scope.isShownMoreThanTotal();

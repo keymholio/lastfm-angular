@@ -12,7 +12,7 @@ To run this project, you need to have the following installed globally:
 * Bower
 
 ## Demo
-[](http://lastfm-angular.herokuapp.com/)
+[Heroku Demo](http://lastfm-angular.herokuapp.com/)
 
 ## Global Installs
 

@@ -11,6 +11,9 @@ To run this project, you need to have the following installed globally:
 * Grunt & Grunt CLI (Command Line Interface)
 * Bower
 
+## Demo
+[](http://lastfm-angular.herokuapp.com/)
+
 ## Global Installs
 
 ###Ruby Installation

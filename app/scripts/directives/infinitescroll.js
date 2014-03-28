@@ -6,7 +6,6 @@ angular.module('lastfmApp')
       link: function (scope, element, attrs) {
         var elementBottom, windowBottom;
         $window = angular.element($window);
-        console.log(scope);
         $window.bind('scroll', function() {
           windowBottom = $window.height() + $window.scrollTop();
           elementBottom = element.offset().top + element.innerHeight();

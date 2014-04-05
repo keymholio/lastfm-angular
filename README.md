@@ -69,3 +69,5 @@ grunt test
 ```
 
 *There are other tasks you can do with Grunt. Refer to `Gruntfile.js`.*
+
+https://www.codeship.io/projects/f4961000-9f0b-0131-17ed-5e73b06de6b5/status

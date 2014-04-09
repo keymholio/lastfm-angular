@@ -12,7 +12,7 @@ To run this project, you need to have the following installed globally:
 * Bower
 
 ## Demo
-[Heroku Demo](http://lastfm-angular.herokuapp.com/)
+[S3 Demo](http://lastfm-angular.s3-website-us-east-1.amazonaws.com/)
 
 ## Global Installs
 
@@ -69,4 +69,3 @@ grunt test
 ```
 
 *There are other tasks you can do with Grunt. Refer to `Gruntfile.js`.*
-

@@ -1,3 +1,0 @@
-[submodule "deploy"]
-	path = deploy
-	url = git@heroku.com:lastfm-angular.git

@@ -13,7 +13,6 @@ angular.module('lastfmApp')
     $scope.populating = false;
 
     $scope.populate = function (page) {
-      console.log(page);
       // check if we're already populating
       if (!$scope.populating) {
         $scope.populating = true;

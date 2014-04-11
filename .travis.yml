@@ -1,8 +1,6 @@
 language: node_js
 node_js:
 - '0.10'
-install:
-  - pip install awscli
 before_script:
 - gem install compass
 - npm install
@@ -10,11 +8,12 @@ before_script:
 - bower install
 - npm install grunt-cli
 - grunt
-env:
-  global:
-  - secure: YEJT4xO66MIgxWoLk9m11hkIS/4FJ60kfiokcTwM3SXbxXYIHe0Rcu5fYTrlUKPZpY42lW9zXtJxnvbGqdbKiXssZavROO+HURUkAMoZiCFPnT9WFb30VvG9x08dYFOXJLOTQ+MVCJQcNoYLbPMDOpDRnVCqp6vpIMKhJyBUm/A=
-  - secure: CvJFi0uaIlu0be+ld7oLfD9SfewQ+yZUvTstF2M7zFE+arDVXELB7LWDK6AR5FzHyXrUxLEEoiLweSEHbPjTSiI60GKtHUT93mfHVXm8MznHxqjpE4c0kgkbiZoY2tnv5ACbdtOxURV9y1378DEnH4GuTK/+S9fMFxdwGBHp6Sc=
-  - secure: htUNiqSgexD9FSlIM2s+JPqSc2mSdOZqtcssJvOeqRzLeFfPrSIV0QFXqNokhkvHE7/t3KYncw8Bo8z4NhJl7vdrPX2tO1akYYh4Y0QXz4W+YDY1N6n3FwzupPITvsO0XADbNBtGFM6RaLZ0T3sfbNi4++bmvgPVsBxo2zXNG3E=
-after_script:
-- aws s3 rm s3://lastfm-angular --recursive
-- aws s3 sync dist s3://lastfm-angular --acl public-read --cache-control "public, max-age=86400"
+deploy:
+  provider: s3
+  access_key_id: AKIAISJMRUQ4YJVE4AYA
+  secret_access_key:
+    secure: E1SMwWvV4J2OWS+kQcu/DnCaVR+Jf1wigk+guvlAS9YcqQuaVJNMDiMWJdoHO6tnv3PIY2JtVgxMA4IRpW9F0RDHeJh2k6C5D+szw0x+XRnfbTx57YLw2c1b+IwXKp5Rl7hAzVsvaUZC4NuU6vbwxS+SOKIsICfq6r2VmpS0zoY=
+  bucket: lastfm-angular
+  local-dir: dist/*
+  on:
+    repo: keymholio/lastfm-angular

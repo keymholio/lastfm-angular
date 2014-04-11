@@ -72,5 +72,3 @@ grunt
 ```bash
 grunt test
 ```
-
-[ ![Codeship Status for keymholio/lastfm-angular](https://www.codeship.io/projects/f4961000-9f0b-0131-17ed-5e73b06de6b5/status?branch=master)](https://www.codeship.io/projects/18097)

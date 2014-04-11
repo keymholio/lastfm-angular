@@ -15,6 +15,6 @@ deploy:
   secret_access_key:
     secure: E1SMwWvV4J2OWS+kQcu/DnCaVR+Jf1wigk+guvlAS9YcqQuaVJNMDiMWJdoHO6tnv3PIY2JtVgxMA4IRpW9F0RDHeJh2k6C5D+szw0x+XRnfbTx57YLw2c1b+IwXKp5Rl7hAzVsvaUZC4NuU6vbwxS+SOKIsICfq6r2VmpS0zoY=
   bucket: lastfm-angular
-  local-dir: dist/*
+  local-dir: dist
   on:
     repo: keymholio/lastfm-angular

@@ -1,12 +1,14 @@
 language: node_js
 node_js:
 - '0.10'
+install:
+  - pip install awscli
 before_script:
 - gem install compass
 - npm install
 - npm install bower
+- bower install
 - npm install grunt-cli
-- pip install awscli
 - grunt
 env:
   global:

@@ -10,7 +10,6 @@ before_script:
 - npm install grunt-cli
 - grunt test
 - grunt build
-- rm -rf dist/bower_components
 deploy:
   provider: s3
   access_key_id: AKIAISJMRUQ4YJVE4AYA
